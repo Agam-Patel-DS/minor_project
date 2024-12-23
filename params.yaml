@@ -1,0 +1,24 @@
+preprocess:
+  data: /content/New Plant Diseases Dataset(Augmented)/New Plant Diseases Dataset(Augmented)
+  image_size: 224
+  classindices: class_indices.json
+  batch_size: 32
+  class_mode: categorical
+  rescale: 1./255
+
+
+train:
+  batch_size: 32
+  epochs: 1
+  weights: imagenet
+  include_top: False
+  name: LeafDisease_MobileNet
+  steps_per_epoch: 150,
+  validation_steps: 100
+  image_size: 224
+  save_dir: model/
+
+prediction:
+  model: new_models/dense_net.tflite
+  class_indices: class_indices.json
+  

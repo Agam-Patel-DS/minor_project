@@ -1,0 +1,210 @@
+
+Collecting usage statistics. To deactivate, set browser.gatherUsageStats to false.
+
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://172.28.0.12:8501
+  External URL: http://34.138.201.173:8501
+
+2024-11-23 12:43:21.274913: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:485] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-11-23 12:43:21.339550: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:8454] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-11-23 12:43:21.359763: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1452] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-11-23 12:43:21.415894: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-11-23 12:43:24.309404: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-11-23 12:43:29.005 Uncaught app exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/content/drive/MyDrive/leaf_disease_detection/leaf_diesease_det/app.py", line 20, in <module>
+    st.set_page_config(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/commands/page_config.py", line 265, in set_page_config
+    ctx.enqueue(msg)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner_utils/script_run_context.py", line 174, in enqueue
+    raise StreamlitSetPageConfigMustBeFirstCommandError()
+streamlit.errors.StreamlitSetPageConfigMustBeFirstCommandError: `set_page_config()` can only be called once per app page, and must be called as the first Streamlit command in your script.
+
+For more information refer to the [docs](https://docs.streamlit.io/develop/api-reference/configuration/st.set_page_config).
+2024-11-23 12:44:17.639 Uncaught app exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/content/drive/MyDrive/leaf_disease_detection/leaf_diesease_det/app.py", line 20, in <module>
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/commands/page_config.py", line 265, in set_page_config
+    ctx.enqueue(msg)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner_utils/script_run_context.py", line 174, in enqueue
+    raise StreamlitSetPageConfigMustBeFirstCommandError()
+streamlit.errors.StreamlitSetPageConfigMustBeFirstCommandError: `set_page_config()` can only be called once per app page, and must be called as the first Streamlit command in your script.
+
+For more information refer to the [docs](https://docs.streamlit.io/develop/api-reference/configuration/st.set_page_config).
+2024-11-23 12:45:53.367 The `use_column_width` parameter has been deprecated and will be removed in a future release. Please utilize the `use_container_width` parameter instead.
+2024-11-23 12:45:53.370 Uncaught app exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 427, in image_to_url
+    with open(image, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 164, in _read_file
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/content/drive/MyDrive/leaf_disease_detection/leaf_diesease_det/app.py", line 190, in <module>
+    st.image("Linkedin Banner.png", caption="MobileNet Architecture", use_column_width=True)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 204, in image
+    marshall_images(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 588, in marshall_images
+    proto_img.url = image_to_url(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 439, in image_to_url
+    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/media_file_manager.py", line 226, in add
+    file_id = self._storage.load_and_get_id(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 115, in load_and_get_id
+    file_data = self._read_file(path_or_data)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 167, in _read_file
+    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+streamlit.runtime.media_file_storage.MediaFileStorageError: Error opening 'Linkedin Banner.png'
+2024-11-23 12:46:24.318 The `use_column_width` parameter has been deprecated and will be removed in a future release. Please utilize the `use_container_width` parameter instead.
+2024-11-23 12:46:24.319 Uncaught app exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 427, in image_to_url
+    with open(image, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 164, in _read_file
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/content/drive/MyDrive/leaf_disease_detection/leaf_diesease_det/app.py", line 190, in <module>
+    st.image("Linkedin Banner.png", caption="MobileNet Architecture", use_column_width=True)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 204, in image
+    marshall_images(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 588, in marshall_images
+    proto_img.url = image_to_url(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 439, in image_to_url
+    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/media_file_manager.py", line 226, in add
+    file_id = self._storage.load_and_get_id(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 115, in load_and_get_id
+    file_data = self._read_file(path_or_data)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 167, in _read_file
+    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+streamlit.runtime.media_file_storage.MediaFileStorageError: Error opening 'Linkedin Banner.png'
+2024-11-23 12:46:55.922 The `use_column_width` parameter has been deprecated and will be removed in a future release. Please utilize the `use_container_width` parameter instead.
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 1s/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 1s/step
+2024-11-23 12:46:59.129 The `use_column_width` parameter has been deprecated and will be removed in a future release. Please utilize the `use_container_width` parameter instead.
+2024-11-23 12:46:59.133 Uncaught app exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 427, in image_to_url
+    with open(image, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 164, in _read_file
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/content/drive/MyDrive/leaf_disease_detection/leaf_diesease_det/app.py", line 190, in <module>
+    st.image("Linkedin Banner.png", caption="MobileNet Architecture", use_column_width=True)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 204, in image
+    marshall_images(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 588, in marshall_images
+    proto_img.url = image_to_url(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 439, in image_to_url
+    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/media_file_manager.py", line 226, in add
+    file_id = self._storage.load_and_get_id(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 115, in load_and_get_id
+    file_data = self._read_file(path_or_data)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 167, in _read_file
+    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+streamlit.runtime.media_file_storage.MediaFileStorageError: Error opening 'Linkedin Banner.png'
+2024-11-23 12:47:05.732 The `use_column_width` parameter has been deprecated and will be removed in a future release. Please utilize the `use_container_width` parameter instead.
+WARNING:absl:Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+The disease is Potato___Early_blight
+[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m0s[0m 1s/step[1m1/1[0m [32m━━━━━━━━━━━━━━━━━━━━[0m[37m[0m [1m1s[0m 1s/step
+2024-11-23 12:47:08.691 The `use_column_width` parameter has been deprecated and will be removed in a future release. Please utilize the `use_container_width` parameter instead.
+2024-11-23 12:47:08.692 Uncaught app exception
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 427, in image_to_url
+    with open(image, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 164, in _read_file
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Linkedin Banner.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/exec_code.py", line 88, in exec_func_with_error_handling
+    result = func()
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/scriptrunner/script_runner.py", line 579, in code_to_exec
+    exec(code, module.__dict__)
+  File "/content/drive/MyDrive/leaf_disease_detection/leaf_diesease_det/app.py", line 190, in <module>
+    st.image("Linkedin Banner.png", caption="MobileNet Architecture", use_column_width=True)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/metrics_util.py", line 410, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 204, in image
+    marshall_images(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 588, in marshall_images
+    proto_img.url = image_to_url(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/elements/image.py", line 439, in image_to_url
+    url = runtime.get_instance().media_file_mgr.add(image, mimetype, image_id)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/media_file_manager.py", line 226, in add
+    file_id = self._storage.load_and_get_id(
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 115, in load_and_get_id
+    file_data = self._read_file(path_or_data)
+  File "/usr/local/lib/python3.10/dist-packages/streamlit/runtime/memory_media_file_storage.py", line 167, in _read_file
+    raise MediaFileStorageError(f"Error opening '{filename}'") from ex
+streamlit.runtime.media_file_storage.MediaFileStorageError: Error opening 'Linkedin Banner.png'
+The disease is Potato___Early_blight
+  Stopping...
